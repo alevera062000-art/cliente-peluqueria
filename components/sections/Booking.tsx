@@ -1,11 +1,33 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { Reveal } from "@/components/ui/Reveal";
-import { BookingCalendar } from "@/components/booking/BookingCalendar";
 import { BookingConfirmModal } from "@/components/booking/BookingConfirmModal";
 import { CancelLookupModal } from "@/components/booking/CancelLookupModal";
 import { isDemoMode } from "@/lib/firebase";
+
+// El calendario depende de la fecha/hora actual del visitante (mes por defecto,
+// días pasados/disponibles) para su primer render. Como "/" se prerenderiza de
+// forma estática en build time, cargarlo solo en cliente (ssr:false) evita que
+// esa fecha "horneada" en el HTML estático quede desfasada respecto al
+// navegador del usuario y provoque un mismatch de hidratación días después del
+// despliegue.
+const BookingCalendar = dynamic(
+  () => import("@/components/booking/BookingCalendar").then((m) => m.BookingCalendar),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="cal-layout">
+        <div className="cal-box">
+          <p style={{ padding: "2rem", textAlign: "center", color: "var(--text-muted)", fontSize: "0.85rem" }}>
+            Cargando calendario...
+          </p>
+        </div>
+      </div>
+    ),
+  },
+);
 
 export function Booking() {
   const [pendingSlot, setPendingSlot] = useState<{ date: string; time: string } | null>(null);
@@ -15,7 +37,7 @@ export function Booking() {
   return (
     <section id="reservas">
       <div className="container">
-        <Reveal style={{ marginBottom: "2.5rem" }}>
+        <Reveal className="reveal" style={{ marginBottom: "2.5rem" }}>
           <span className="label">Agenda online</span>
           <h2 className="section-title">Reserva tu cita</h2>
           <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", fontWeight: 300, marginTop: "0.5rem" }}>

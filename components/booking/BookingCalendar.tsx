@@ -5,6 +5,7 @@ import { MESES, DIAS_CORTO, DIAS_LARGO, fmtDate, getSlots } from "@/lib/dates";
 import { SALON } from "@/lib/constants";
 import { getAllBooked, getDayBooked } from "@/lib/booking";
 import { useBookedRealtime } from "@/hooks/useBookedRealtime";
+import { Reveal } from "@/components/ui/Reveal";
 
 interface BookingCalendarProps {
   onSelectSlot: (dateStr: string, timeStr: string) => void;
@@ -113,7 +114,7 @@ export function BookingCalendar({ onSelectSlot, refreshSignal = 0 }: BookingCale
 
   return (
     <div className="cal-layout">
-      <div className="cal-box reveal-left">
+      <Reveal className="cal-box reveal-left">
         <div className="cal-head">
           <button className="cal-nav-btn" onClick={goPrev}>
             &#8592;
@@ -154,11 +155,11 @@ export function BookingCalendar({ onSelectSlot, refreshSignal = 0 }: BookingCale
             );
           })}
         </div>
-      </div>
+      </Reveal>
 
-      <div className="slots-box reveal-right" id="slotsBox">
+      <Reveal className="slots-box reveal-right">
         {!selectedDate ? (
-          <div className="slots-empty" id="slotsEmpty">
+          <div className="slots-empty">
             <svg viewBox="0 0 24 24">
               <rect x="3" y="4" width="18" height="18" rx="2" />
               <path d="M16 2v4M8 2v4M3 10h18" />
@@ -170,7 +171,7 @@ export function BookingCalendar({ onSelectSlot, refreshSignal = 0 }: BookingCale
             </span>
           </div>
         ) : (
-          <div id="slotsContent">
+          <div>
             <div className="slots-day-label">{selectedLabel}</div>
             <div className="slots-grid">
               {daySlots.map((s) => (
@@ -186,7 +187,7 @@ export function BookingCalendar({ onSelectSlot, refreshSignal = 0 }: BookingCale
             </div>
           </div>
         )}
-      </div>
+      </Reveal>
     </div>
   );
 }

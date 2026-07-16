@@ -15,9 +15,9 @@ export async function POST(request: Request) {
   }
 
   const { action, payload = {} } = body;
-  const db = getAdminDb();
 
   try {
+    const db = getAdminDb();
     let result: unknown;
 
     switch (action) {

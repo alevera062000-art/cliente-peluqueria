@@ -24,7 +24,7 @@ export function Shop() {
   return (
     <section id="tienda">
       <div className="container">
-        <Reveal style={{ marginBottom: "2.8rem", textAlign: "center" }}>
+        <Reveal className="reveal" style={{ marginBottom: "2.8rem", textAlign: "center" }}>
           <span className="label">Nuestros productos</span>
           <h2 className="section-title" style={{ marginTop: "0.5rem" }}>
             Llévate el salón a casa

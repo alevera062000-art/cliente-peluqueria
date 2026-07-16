@@ -13,7 +13,7 @@ export function Gallery() {
     <>
       <section id="galeria">
         <div className="container">
-          <Reveal style={{ marginBottom: "3rem", textAlign: "center" }}>
+          <Reveal className="reveal" style={{ marginBottom: "3rem", textAlign: "center" }}>
             <span className="label">Nuestro trabajo</span>
             <h2 className="section-title" style={{ marginTop: "0.8rem" }}>
               Resultados que hablan por sí solos
