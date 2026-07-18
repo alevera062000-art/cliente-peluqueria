@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
+import { getAdminDb } from "@/lib/firebaseAdmin";
 import type { Cita, Recordatorio } from "@/types";
-
-const FIREBASE_BASE = process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL ?? "";
 
 export async function GET(request: Request) {
   const authHeader = request.headers.get("authorization");
@@ -23,8 +22,8 @@ export async function GET(request: Request) {
 
 async function enviarRecordatoriosAgenda(fecha: string): Promise<number> {
   try {
-    const res = await fetch(`${FIREBASE_BASE}/recordatorios.json`);
-    const data: Record<string, Recordatorio> | null = await res.json();
+    const snap = await getAdminDb().ref("recordatorios").once("value");
+    const data: Record<string, Recordatorio> | null = snap.val();
     if (!data) return 0;
 
     const manana = Object.values(data).filter((r) => r.fecha === fecha);
@@ -49,8 +48,8 @@ async function enviarRecordatoriosAgenda(fecha: string): Promise<number> {
 async function enviarRecordatoriosCitas(fecha: string): Promise<number> {
   if (!process.env.RESEND_API_KEY) return 0;
   try {
-    const res = await fetch(`${FIREBASE_BASE}/citas.json`);
-    const data: Record<string, Record<string, Cita>> | null = await res.json();
+    const snap = await getAdminDb().ref("citas").once("value");
+    const data: Record<string, Record<string, Cita>> | null = snap.val();
     if (!data) return 0;
 
     const citasManana: (Cita & { time: string })[] = [];
