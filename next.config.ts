@@ -17,7 +17,12 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      // Firebase Realtime Database cae a un transporte de long-polling basado en
+      // <script src="https://...firebasedatabase.app/..."> cuando el WebSocket no
+      // se establece igual que en Chrome/Firefox (observado en Safari/WebKit) —
+      // ese fallback lo gobierna script-src, no connect-src, así que también
+      // necesita permitir el dominio de la base de datos.
+      "script-src 'self' 'unsafe-inline' https://*.firebasedatabase.app https://*.firebaseio.com",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https: blob:",
       "media-src 'self' blob:",
