@@ -21,7 +21,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https: blob:",
       "media-src 'self' blob:",
-      "connect-src 'self' https://*.firebasedatabase.app wss://*.firebasedatabase.app https://firebasedatabase.googleapis.com https://api.emailjs.com https://generativelanguage.googleapis.com",
+      "connect-src 'self' https://*.firebasedatabase.app wss://*.firebasedatabase.app https://*.firebaseio.com wss://*.firebaseio.com https://firebasedatabase.googleapis.com https://api.emailjs.com https://generativelanguage.googleapis.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
