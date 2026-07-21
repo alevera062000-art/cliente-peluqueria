@@ -118,11 +118,7 @@ async function enviarEmailRecordatorio(cita: Cita & { time: string }): Promise<b
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // Remitente de pruebas de Resend (onboarding@resend.dev): se usa mientras
-        // no haya un dominio propio verificado en resend.com/domains. En este modo,
-        // Resend solo entrega a la dirección de la cuenta — para enviar recordatorios
-        // a clientes reales hay que verificar un dominio y cambiar este remitente.
-        from: "BN Estilistas <onboarding@resend.dev>",
+        from: "BN Estilistas <info@bnestilistas.com>",
         to: [cita.email],
         subject: `Recordatorio: tu cita es mañana a las ${cita.time} ✂️`,
         html,
