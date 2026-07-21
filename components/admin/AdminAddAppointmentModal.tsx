@@ -48,7 +48,7 @@ export function AdminAddAppointmentModal({ open, initialDate, onClose, onContinu
   return (
     <div className="modal-overlay open" onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal-box" style={{ maxWidth: 360 }}>
-        <button className="modal-close-btn" onClick={onClose}>
+        <button className="modal-close-btn" onClick={onClose} aria-label="Cerrar">
           ✕
         </button>
         <h2 className="modal-title" style={{ fontSize: "1.1rem", marginBottom: "1.2rem" }}>

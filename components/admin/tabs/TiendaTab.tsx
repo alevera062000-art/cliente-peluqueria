@@ -67,22 +67,22 @@ export function TiendaTab() {
         <h4>+ Añadir producto nuevo</h4>
         <div className="prod-form-grid">
           <div className="fg" style={{ marginBottom: 0 }}>
-            <label>Nombre *</label>
-            <input type="text" className="admin-pass-input" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Ej: Mascarilla Reparadora" />
+            <label htmlFor="pNombre">Nombre *</label>
+            <input id="pNombre" type="text" className="admin-pass-input" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Ej: Mascarilla Reparadora" />
           </div>
           <div className="fg" style={{ marginBottom: 0 }}>
-            <label>Precio (€) *</label>
-            <input type="number" className="admin-pass-input" value={precio} onChange={(e) => setPrecio(e.target.value)} placeholder="24.90" step="0.01" min="0" />
+            <label htmlFor="pPrecio">Precio (€) *</label>
+            <input id="pPrecio" type="number" inputMode="decimal" className="admin-pass-input" value={precio} onChange={(e) => setPrecio(e.target.value)} placeholder="24.90" step="0.01" min="0" />
           </div>
         </div>
         <div className="fg" style={{ marginBottom: "0.6rem" }}>
-          <label>Descripción</label>
-          <input type="text" className="admin-pass-input" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="Ej: Para cabello seco. 250 ml." />
+          <label htmlFor="pDesc">Descripción</label>
+          <input id="pDesc" type="text" className="admin-pass-input" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="Ej: Para cabello seco. 250 ml." />
         </div>
         <div className="prod-form-grid">
           <div className="fg" style={{ marginBottom: 0 }}>
-            <label>Categoría *</label>
-            <select className="admin-pass-input" value={cat} onChange={(e) => setCat(e.target.value)}>
+            <label htmlFor="pCat">Categoría *</label>
+            <select id="pCat" className="admin-pass-input" value={cat} onChange={(e) => setCat(e.target.value)}>
               <option value="">— Elige —</option>
               {CATEGORIAS_PRODUCTO.map((c) => (
                 <option key={c}>{c}</option>
@@ -91,13 +91,13 @@ export function TiendaTab() {
             </select>
           </div>
           <div className="fg" style={{ marginBottom: 0 }}>
-            <label>Etiqueta (opcional)</label>
-            <input type="text" className="admin-pass-input" value={badge} onChange={(e) => setBadge(e.target.value)} placeholder="Ej: Nuevo, Oferta..." />
+            <label htmlFor="pBadge">Etiqueta (opcional)</label>
+            <input id="pBadge" type="text" className="admin-pass-input" value={badge} onChange={(e) => setBadge(e.target.value)} placeholder="Ej: Nuevo, Oferta..." />
           </div>
         </div>
         <div className="fg" style={{ marginBottom: "0.8rem" }}>
-          <label>URL de la imagen</label>
-          <input type="url" className="admin-pass-input" value={img} onChange={(e) => setImg(e.target.value)} placeholder="https://... o /assets/nombre.webp" />
+          <label htmlFor="pImg">URL de la imagen</label>
+          <input id="pImg" type="url" inputMode="url" className="admin-pass-input" value={img} onChange={(e) => setImg(e.target.value)} placeholder="https://... o /assets/nombre.webp" />
         </div>
         <button onClick={handleGuardar} className="btn-primary" style={{ width: "100%" }}>
           Guardar producto

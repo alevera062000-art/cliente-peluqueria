@@ -84,7 +84,7 @@ export function BookingConfirmModal({ pending, onClose, onBooked }: BookingConfi
   return (
     <div className="modal-overlay open" onClick={(e) => e.target === e.currentTarget && handleClose()}>
       <div className="modal-box">
-        <button className="modal-close-btn" onClick={handleClose}>
+        <button className="modal-close-btn" onClick={handleClose} aria-label="Cerrar">
           ✕
         </button>
         {!success ? (
@@ -93,17 +93,17 @@ export function BookingConfirmModal({ pending, onClose, onBooked }: BookingConfi
             <p className="modal-when">{label}</p>
             <div className="fg">
               <label htmlFor="bNombre">Nombre *</label>
-              <input id="bNombre" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Tu nombre completo" required />
+              <input id="bNombre" autoComplete="name" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Tu nombre completo" required />
             </div>
             <div className="fg">
               <label htmlFor="bTel">Teléfono *</label>
-              <input id="bTel" type="tel" value={telefono} onChange={(e) => setTelefono(e.target.value)} placeholder="Tu número de teléfono" required />
+              <input id="bTel" type="tel" inputMode="tel" autoComplete="tel" value={telefono} onChange={(e) => setTelefono(e.target.value)} placeholder="Tu número de teléfono" required />
             </div>
             <div className="fg">
               <label htmlFor="bEmail">
                 Email <span style={{ fontWeight: 400, opacity: 0.6 }}>(para recordatorio 24h antes)</span>
               </label>
-              <input id="bEmail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@email.com" />
+              <input id="bEmail" type="email" inputMode="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@email.com" />
             </div>
             <div className="fg">
               <label htmlFor="bServ">Servicio</label>

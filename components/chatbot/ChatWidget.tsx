@@ -277,7 +277,7 @@ export function ChatWidget() {
               <div className="chat-head-sub">Asistente virtual</div>
             </div>
           </div>
-          <button className="chat-x" onClick={() => setOpen(false)}>
+          <button className="chat-x" onClick={() => setOpen(false)} aria-label="Cerrar chat">
             ✕
           </button>
         </div>
@@ -308,14 +308,21 @@ export function ChatWidget() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendChat()}
+            autoComplete="off"
+            aria-label="Escribe un mensaje"
           />
-          <button className="chat-snd" onClick={sendChat}>
+          <button className="chat-snd" onClick={sendChat} aria-label="Enviar mensaje">
             &#8594;
           </button>
         </div>
       </div>
 
-      <button className="chat-toggle" onClick={() => setOpen((o) => !o)} title="Abrir chat">
+      <button
+        className="chat-toggle"
+        onClick={() => setOpen((o) => !o)}
+        title={open ? "Cerrar chat" : "Abrir chat"}
+        aria-label={open ? "Cerrar chat" : "Abrir chat"}
+      >
         {!open ? (
           <svg viewBox="0 0 24 24">
             <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10H6V10h12v2zm0-3H6V7h12v2z" />

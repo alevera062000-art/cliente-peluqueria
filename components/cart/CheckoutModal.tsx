@@ -82,17 +82,17 @@ export function CheckoutModal({ open, onClose }: CheckoutModalProps) {
 
         {step === "form" && (
           <div className="checkout-step active" id="coStep1">
-            <label className="co-label">Nombre completo</label>
-            <input className="co-input" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Tu nombre" />
-            <label className="co-label">Teléfono</label>
-            <input className="co-input" value={telefono} onChange={(e) => setTelefono(e.target.value)} placeholder="627 000 000" />
-            <label className="co-label">
+            <label className="co-label" htmlFor="coNombre">Nombre completo</label>
+            <input id="coNombre" className="co-input" autoComplete="name" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Tu nombre" />
+            <label className="co-label" htmlFor="coTelefono">Teléfono</label>
+            <input id="coTelefono" className="co-input" type="tel" inputMode="tel" autoComplete="tel" value={telefono} onChange={(e) => setTelefono(e.target.value)} placeholder="627 000 000" />
+            <label className="co-label" htmlFor="coEmail">
               Email{" "}
               <span style={{ fontSize: "0.8em", color: "var(--text-muted)", textTransform: "none", letterSpacing: 0 }}>
                 (para recibir tu factura)
               </span>
             </label>
-            <input className="co-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@email.com" />
+            <input id="coEmail" className="co-input" type="email" inputMode="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@email.com" />
 
             <div className="pay-info-box show" id="pi-tienda">
               <span className="pi-label">Recogida y pago en tienda</span>

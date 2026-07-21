@@ -44,7 +44,7 @@ export function Navbar({ onOpenCart }: { onOpenCart: () => void }) {
 
       <nav id="navbar" className={scrolled ? "scrolled" : ""}>
         <a href="#inicio" className="nav-logo" onClick={() => setMenuOpen(false)}>
-          <Image src="/assets/logo.png" alt="BN Estilistas" width={42} height={42} />
+          <Image src="/assets/logo.png" alt="BN Estilistas" width={42} height={42} priority />
           <div>
             <div className="logo-fallback">BN Estilistas</div>
             <div className="nav-tagline">Peluquería & Belleza</div>

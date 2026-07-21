@@ -18,7 +18,7 @@ export function CartDrawer({ open, onClose, onCheckout }: CartDrawerProps) {
       <div className={`cart-drawer${open ? " open" : ""}`} id="cartDrawer">
         <div className="cart-head">
           <span className="cart-head-title">Tu cesta</span>
-          <button className="cart-x" onClick={onClose}>
+          <button className="cart-x" onClick={onClose} aria-label="Cerrar carrito">
             ✕
           </button>
         </div>
@@ -48,16 +48,16 @@ export function CartDrawer({ open, onClose, onCheckout }: CartDrawerProps) {
                   <div className="cart-item-name">{i.nombre}</div>
                   <div className="cart-item-price">{i.precio.toFixed(2).replace(".", ",")} €</div>
                   <div className="cart-qty">
-                    <button className="qty-btn" onClick={() => changeQty(i.id, -1)}>
+                    <button className="qty-btn" onClick={() => changeQty(i.id, -1)} aria-label={`Quitar una unidad de ${i.nombre}`}>
                       −
                     </button>
                     <span className="qty-num">{i.qty}</span>
-                    <button className="qty-btn" onClick={() => changeQty(i.id, 1)}>
+                    <button className="qty-btn" onClick={() => changeQty(i.id, 1)} aria-label={`Añadir una unidad de ${i.nombre}`}>
                       +
                     </button>
                   </div>
                 </div>
-                <button className="cart-item-del" onClick={() => removeItem(i.id)} title="Eliminar">
+                <button className="cart-item-del" onClick={() => removeItem(i.id)} title="Eliminar" aria-label={`Eliminar ${i.nombre} del carrito`}>
                   ✕
                 </button>
               </div>

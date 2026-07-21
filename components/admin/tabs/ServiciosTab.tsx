@@ -55,17 +55,17 @@ export function ServiciosTab() {
         <h4>+ Añadir servicio nuevo</h4>
         <div className="prod-form-grid">
           <div className="fg" style={{ marginBottom: 0 }}>
-            <label>Nombre *</label>
-            <input type="text" className="admin-pass-input" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Ej: Manicura" />
+            <label htmlFor="svNombre">Nombre *</label>
+            <input id="svNombre" type="text" className="admin-pass-input" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Ej: Manicura" />
           </div>
           <div className="fg" style={{ marginBottom: 0 }}>
-            <label>Precio desde (€) *</label>
-            <input type="number" className="admin-pass-input" value={precio} onChange={(e) => setPrecio(e.target.value)} placeholder="25.00" step="0.01" min="0" />
+            <label htmlFor="svPrecio">Precio desde (€) *</label>
+            <input id="svPrecio" type="number" inputMode="decimal" className="admin-pass-input" value={precio} onChange={(e) => setPrecio(e.target.value)} placeholder="25.00" step="0.01" min="0" />
           </div>
         </div>
         <div className="fg" style={{ marginBottom: "0.8rem" }}>
-          <label>Descripción</label>
-          <input type="text" className="admin-pass-input" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="Breve descripción del servicio" />
+          <label htmlFor="svDesc">Descripción</label>
+          <input id="svDesc" type="text" className="admin-pass-input" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="Breve descripción del servicio" />
         </div>
         <button onClick={handleGuardar} className="btn-primary" style={{ width: "100%" }}>
           Guardar servicio

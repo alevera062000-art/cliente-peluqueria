@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Raleway, Cinzel } from "next/font/google";
 import { Providers } from "@/context/providers";
 import { SITE_URL } from "@/lib/constants";
@@ -94,6 +94,14 @@ export const metadata: Metadata = {
     "business:contact_data:country_name": "España",
     "business:contact_data:phone_number": "+34627052418",
   },
+};
+
+// viewport-fit=cover habilita env(safe-area-inset-*) para el notch/home-indicator
+// del iPhone en los elementos fixed (navbar, botones flotantes, drawers).
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

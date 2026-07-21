@@ -38,6 +38,8 @@ export function AdminPasswordGate() {
         type="password"
         className="admin-pass-input"
         placeholder="Contraseña"
+        aria-label="Contraseña de administrador"
+        autoComplete="current-password"
         value={pass}
         onChange={(e) => setPass(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && handleEnter()}
@@ -59,8 +61,10 @@ export function AdminPasswordGate() {
           </p>
           <input
             type="tel"
+            inputMode="tel"
             className="admin-pass-input"
             placeholder="Teléfono del negocio"
+            aria-label="Teléfono del negocio para recuperar el acceso"
             value={recoveryPhone}
             onChange={(e) => setRecoveryPhone(e.target.value)}
             style={{ marginBottom: "0.5rem" }}

@@ -32,7 +32,8 @@ export function PrivacyModal({ open, onClose }: PrivacyModalProps) {
       >
         <button
           onClick={onClose}
-          style={{ position: "absolute", top: "1rem", right: "1rem", background: "none", border: "none", color: "var(--text-muted)", fontSize: "1.2rem", cursor: "pointer" }}
+          aria-label="Cerrar"
+          style={{ position: "absolute", top: "1rem", right: "1rem", background: "none", border: "none", color: "var(--text-muted)", fontSize: "1.2rem", cursor: "pointer", minWidth: 44, minHeight: 44 }}
         >
           ✕
         </button>

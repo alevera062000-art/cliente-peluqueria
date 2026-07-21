@@ -58,7 +58,7 @@ export function CancelLookupModal({ open, onClose, onCancelled }: CancelLookupMo
   return (
     <div className="modal-overlay open" onClick={(e) => e.target === e.currentTarget && handleClose()}>
       <div className="modal-box">
-        <button className="modal-close-btn" onClick={handleClose}>
+        <button className="modal-close-btn" onClick={handleClose} aria-label="Cerrar">
           ✕
         </button>
 
@@ -77,6 +77,8 @@ export function CancelLookupModal({ open, onClose, onCancelled }: CancelLookupMo
                 onKeyDown={(e) => e.key === "Enter" && handleLookup()}
                 placeholder="Ej: HX4K2M89"
                 maxLength={8}
+                autoComplete="off"
+                autoCapitalize="characters"
                 style={{ textTransform: "uppercase", letterSpacing: "0.18em", fontSize: "1.1rem", textAlign: "center" }}
               />
             </div>

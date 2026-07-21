@@ -39,7 +39,7 @@ export function Gallery() {
         id="lightbox"
         onClick={() => setLightboxSrc(null)}
       >
-        <button className="lightbox-close" onClick={() => setLightboxSrc(null)}>
+        <button className="lightbox-close" onClick={() => setLightboxSrc(null)} aria-label="Cerrar imagen">
           ✕
         </button>
         {lightboxSrc && (
