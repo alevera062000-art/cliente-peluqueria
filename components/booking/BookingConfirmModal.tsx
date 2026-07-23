@@ -74,6 +74,20 @@ export function BookingConfirmModal({ pending, onClose, onBooked }: BookingConfi
       });
       setSuccess({ label, token });
       onBooked();
+      if (email.trim()) {
+        fetch("/api/email/booking-confirmation", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            nombre: nombre.trim(),
+            email: email.trim(),
+            date: pending.date,
+            time: pending.time,
+            servicio: servicio || "Sin especificar",
+            token,
+          }),
+        }).catch(() => {});
+      }
     } catch {
       alert("Error al guardar la cita. Inténtalo de nuevo.");
     } finally {

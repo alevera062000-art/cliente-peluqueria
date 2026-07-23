@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import { crearPedido } from "@/lib/pedidos";
-import { sendInvoiceEmail } from "@/lib/email";
 import { SALON } from "@/lib/constants";
 import type { CartItem, Pedido } from "@/types";
 
@@ -66,7 +65,19 @@ export function CheckoutModal({ open, onClose }: CheckoutModalProps) {
     };
 
     await crearPedido(pedido);
-    await sendInvoiceEmail(pedido, email.trim());
+    if (email.trim()) {
+      fetch("/api/email/order-confirmation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre: pedido.nombre,
+          email: email.trim(),
+          codigo: pedido.codigo,
+          items: pedido.items,
+          total: pedido.total,
+        }),
+      }).catch(() => {});
+    }
 
     setSummary({ items, total });
     setOrderCode(codigo);
