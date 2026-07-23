@@ -72,7 +72,11 @@ export function Contact() {
                 </div>
                 <div className="cinfo-body">
                   <span className="clabel">Horario</span>
-                  <span className="cval">[HORARIO DE APERTURA]</span>
+                  <span className="cval">
+                    Lunes a viernes: 9:00–19:00
+                    <br />
+                    Sábados: 9:00–14:00
+                  </span>
                 </div>
               </div>
 
@@ -85,7 +89,9 @@ export function Contact() {
                 </div>
                 <div className="cinfo-body">
                   <span className="clabel">Email</span>
-                  <span className="cval">[TU EMAIL AQUÍ]</span>
+                  <span className="cval">
+                    <a href="mailto:bn.estilistas1@gmail.com">bn.estilistas1@gmail.com</a>
+                  </span>
                 </div>
               </div>
             </div>
