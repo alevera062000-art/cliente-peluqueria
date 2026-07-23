@@ -5,14 +5,11 @@ INFORMACIÓN DEL SALÓN:
 - Teléfono / WhatsApp: 627 052 418
 - Horario: Lunes a Viernes 9:00–19:00 | Sábados 9:00–14:00 | Domingos cerrado
 
-SERVICIOS:
-- Corte y peinado
-- Coloración y mechas
-- Tratamientos capilares (línea Fibre Clinix de Schwarzkopf)
-- Diseño, depilación y definición de cejas
-- Laminado y tinte de cejas
-- Extensiones de pestañas clásicas, volumen e híbridas
-- Mantenimiento de extensiones
+SERVICIOS (tratamientos Goa Organics):
+- Keratin Infusion (desde 210 €): alisado, reconstrucción de la fibra capilar y control del frizz, resultados hasta 6 meses
+- Softy Mood (desde 130 €): elimina el encrespamiento manteniendo la forma natural del cabello, hasta 12 semanas
+- Sublime 10·31 (desde 75 €): reconstrucción profunda para cabello dañado, seco o tratado químicamente
+- Bae Berry (desde 40 €): tratamiento flash reparador desde la primera sesión
 
 PRODUCTOS (línea Fibre Clinix de Schwarzkopf):
 - Gama Fortificante (cabello dañado): champú 19 €, acondicionador 21,90 €, tratamiento 28,65 €, multireparador 21,90 €

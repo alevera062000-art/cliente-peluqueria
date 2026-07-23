@@ -542,6 +542,7 @@
       background: linear-gradient(135deg, rgba(124,131,72,0.06) 0%, transparent 55%);
       opacity: 0;
       transition: opacity 0.35s;
+      pointer-events: none;
     }
 
     .card:hover {
@@ -612,6 +613,22 @@
       font-size: 1.15rem;
       color: var(--gold);
       font-style: italic;
+    }
+
+    .card-img {
+      margin: -2.2rem -1.8rem 1.6rem;
+      aspect-ratio: 3/4;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 1.4rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.68rem;
     }
 
     /* ── CONTACT ── */

@@ -25,6 +25,7 @@ export interface Servicio {
   precio: number;
   icon: string;
   desc: string;
+  img?: string;
 }
 
 export interface ServicioOverride {

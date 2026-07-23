@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useServiciosOverrides } from "@/hooks/useServiciosOverrides";
 import { ICONS_SERVICIO } from "@/lib/data/servicios";
 import { Reveal } from "@/components/ui/Reveal";
@@ -32,21 +33,40 @@ export function Services() {
                 style={span ? { gridColumn: "span 2" } : undefined}
                 staggerDelayMs={i * 110}
               >
-                <span className="card-num">{String(i + 1).padStart(2, "0")}</span>
-                <div className="card-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    dangerouslySetInnerHTML={{ __html: ICONS_SERVICIO[s.icon] || ICONS_SERVICIO.estrella }}
+                {s.img ? (
+                  <div className="card-img">
+                    <Image
+                      src={s.img}
+                      alt={s.nombre}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                ) : (
+                  <>
+                    <span className="card-num">{String(i + 1).padStart(2, "0")}</span>
+                    <div className="card-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        dangerouslySetInnerHTML={{ __html: ICONS_SERVICIO[s.icon] || ICONS_SERVICIO.estrella }}
+                      />
+                    </div>
+                  </>
+                )}
+                <div className="card-body">
+                  <h3 className="card-name">{s.nombre}</h3>
+                  <p
+                    className="card-desc"
+                    dangerouslySetInnerHTML={{ __html: s.desc || "" }}
                   />
-                </div>
-                <h3 className="card-name">{s.nombre}</h3>
-                <p
-                  className="card-desc"
-                  dangerouslySetInnerHTML={{ __html: s.desc || "" }}
-                />
-                <div className="card-price">
-                  <span className="plabel">Desde</span>
-                  <span className="pval">{precioTxt}</span>
+                  <div className="card-price">
+                    <span className="plabel">Desde</span>
+                    <span className="pval">{precioTxt}</span>
+                  </div>
+                  <a href="#reservas" className="btn-primary card-cta">
+                    Reservar cita
+                  </a>
                 </div>
               </Reveal>
             );
