@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const SERVICIOS_OPCIONES = [
-  "Corte, peinado y coloración",
-  "Tratamientos capilares",
-  "Diseño y definición de cejas",
-  "Laminado y tinte de cejas",
-  "Extensiones de pestañas",
+  "Corte y peinado",
+  "Keratin Infusion",
+  "Softy Mood",
+  "Sublime 10·31",
+  "Bae Berry",
   "Otro servicio",
 ];
 
