@@ -12,6 +12,7 @@ const FILTROS = [
   { label: "Antiencrespado", cat: "Antiencrespado" },
   { label: "Color Radiante", cat: "Color Radiante" },
   { label: "Aceites & Sellador", cat: "Aceites" },
+  { label: "Goa Organics", cat: "Goa Organics" },
 ];
 
 export function Shop() {

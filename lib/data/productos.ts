@@ -24,6 +24,16 @@ export const PRODUCTOS: Producto[] = [
   { id: "ac1", nombre: "Aceite Enriquecido", desc: "Aceite capilar enriquecido para nutrición profunda. 100 ml.", precio: 28.95, cat: "Aceites", img: "/assets/rich-oil.webp", badge: "" },
   { id: "ac2", nombre: "Aceite Ligero", desc: "Aceite capilar ligero para brillo y suavidad. 100 ml.", precio: 28.95, cat: "Aceites", img: "/assets/light-oil.webp", badge: "" },
   { id: "s1", nombre: "Sellador de Puntas Fibroso", desc: "Sella y repara las puntas dañadas. 150 ml.", precio: 30.8, cat: "Aceites", img: "/assets/fibre-sealer.webp", badge: "" },
+  // GOA ORGANICS
+  { id: "g1", nombre: "L'Essentiel Shampoo", desc: "Champú nutritivo para cabello seco o dañado. 300 ml.", precio: 28.95, cat: "Goa Organics", img: "/assets/goa-lessentiel-shampoo.webp", badge: "" },
+  { id: "g2", nombre: "Melrose Shampoo", desc: "Champú hidratante para uso frecuente. 250 ml.", precio: 29.95, cat: "Goa Organics", img: "/assets/goa-melrose-shampoo.webp", badge: "" },
+  { id: "g3", nombre: "Le Blonde Shampoo", desc: "Champú matizador para cabellos rubios o con mechas. 300 ml.", precio: 28.95, cat: "Goa Organics", img: "/assets/goa-le-blonde-shampoo.webp", badge: "" },
+  { id: "g4", nombre: "L'Essentiel Mask", desc: "Mascarilla reparadora de nutrición intensa. 200 g.", precio: 40.95, cat: "Goa Organics", img: "/assets/goa-lessentiel-mask.webp", badge: "" },
+  { id: "g5", nombre: "Tasmania Mask", desc: "Mascarilla hidratante para restaurar la fibra capilar. 200 g.", precio: 40.95, cat: "Goa Organics", img: "/assets/goa-tasmania-mask.webp", badge: "" },
+  { id: "g6", nombre: "Cotton Lust", desc: "Tratamiento de acabado para aportar suavidad y brillo. 50 ml.", precio: 33.95, cat: "Goa Organics", img: "/assets/goa-cotton-lust.webp", badge: "" },
+  { id: "g7", nombre: "Hair Bloom", desc: "Suplemento para fortalecer y favorecer el crecimiento del cabello. 200 g.", precio: 49.95, cat: "Goa Organics", img: "/assets/goa-hair-bloom.webp", badge: "" },
+  { id: "g8", nombre: "Melrose Conditioner", desc: "Acondicionador hidratante para uso diario. 200 g.", precio: 30.95, cat: "Goa Organics", img: "/assets/goa-melrose-conditioner.webp", badge: "" },
+  { id: "g9", nombre: "South Bondi", desc: "Protector capilar con protección térmica y frente a los rayos UV. 200 g.", precio: 35.0, cat: "Goa Organics", img: "/assets/goa-south-bondi.webp", badge: "" },
 ];
 
 export const CATEGORIAS_PRODUCTO = [
@@ -32,4 +42,5 @@ export const CATEGORIAS_PRODUCTO = [
   "Antiencrespado",
   "Color Radiante",
   "Aceites",
+  "Goa Organics",
 ] as const;
