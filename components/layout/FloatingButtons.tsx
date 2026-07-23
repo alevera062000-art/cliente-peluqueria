@@ -17,7 +17,7 @@ export function FloatingButtons() {
 
       <a
         className="wa-btn"
-        href="https://wa.me/34627052418?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20vuestros%20servicios"
+        href="https://wa.me/34643503618?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20vuestros%20servicios"
         target="_blank"
         rel="noopener noreferrer"
         title="Enviar WhatsApp"

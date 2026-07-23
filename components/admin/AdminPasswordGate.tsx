@@ -22,7 +22,7 @@ export function AdminPasswordGate() {
 
   function handleRecover() {
     const val = recoveryPhone.replace(/\s/g, "");
-    if (val === "627052418") {
+    if (val === "643503618") {
       localStorage.removeItem(LS_KEYS.adminPass);
       setRecoveryMsg({ text: `✅ Acceso recuperado. Usa la contraseña original: ${SALON.adminPass}`, ok: true });
       setRecoveryPhone("");

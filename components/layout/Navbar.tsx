@@ -37,8 +37,8 @@ export function Navbar({ onOpenCart }: { onOpenCart: () => void }) {
             {l.label}
           </a>
         ))}
-        <a href="tel:627052418" className="mobile-link" style={{ color: "var(--gold)" }} onClick={() => setMenuOpen(false)}>
-          627 052 418
+        <a href="tel:643503618" className="mobile-link" style={{ color: "var(--gold)" }} onClick={() => setMenuOpen(false)}>
+          643 50 36 18
         </a>
       </div>
 
@@ -69,8 +69,8 @@ export function Navbar({ onOpenCart }: { onOpenCart: () => void }) {
             {units}
           </span>
         </button>
-        <a href="tel:627052418" className="nav-cta">
-          627 052 418
+        <a href="tel:643503618" className="nav-cta">
+          643 50 36 18
         </a>
 
         <div className="hamburger" id="hamburger" role="button" aria-label="Abrir menú" onClick={() => setMenuOpen(true)}>

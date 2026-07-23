@@ -44,7 +44,7 @@ export function PrivacyModal({ open, onClose }: PrivacyModalProps) {
           <p>
             <strong style={{ color: "var(--text)" }}>Responsable del tratamiento</strong>
             <br />
-            BN Estilistas · C. Puerta Canseco, 14, 38003 Santa Cruz de Tenerife · 627 052 418
+            BN Estilistas · C. Puerta Canseco, 14, 38003 Santa Cruz de Tenerife · 643 50 36 18
           </p>
           <p>
             <strong style={{ color: "var(--text)" }}>Datos que recogemos</strong>
@@ -73,7 +73,7 @@ export function PrivacyModal({ open, onClose }: PrivacyModalProps) {
             <strong style={{ color: "var(--text)" }}>Tus derechos</strong>
             <br />
             Puedes ejercer los derechos de acceso, rectificación, supresión (&quot;derecho al
-            olvido&quot;), limitación y portabilidad contactando con nosotros en el 627 052 418 o en
+            olvido&quot;), limitación y portabilidad contactando con nosotros en el 643 50 36 18 o en
             persona en el salón.
           </p>
           <p>

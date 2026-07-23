@@ -7,9 +7,10 @@ export function buildHairSalonSchema() {
     "@type": "HairSalon",
     name: "BN Estilistas",
     description:
-      "Peluquería y centro de belleza en Santa Cruz de Tenerife especializado en coloración, rubios, alisados orgánicos, extensiones de pestañas y diseño de cejas.",
+      "Peluquería y centro de belleza en Santa Cruz de Tenerife especializado en coloración, rubios y tratamientos capilares profesionales Goa Organics (Keratin Infusion, Softy Mood, Sublime 10·31, Bae Berry).",
     url: SITE_URL + "/",
-    telephone: "+34627052418",
+    telephone: "+34643503618",
+    email: "bn.estilistas1@gmail.com",
     image: `${SITE_URL}/assets/salon.jpg`,
     priceRange: "€€",
     currenciesAccepted: "EUR",
@@ -44,24 +45,16 @@ export function buildHairSalonSchema() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Servicios de peluquería y belleza",
+      name: "Tratamientos Goa Organics",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corte y peinado" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Coloración y rubios" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Alisado orgánico" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Keratin Infusion" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Softy Mood" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sublime 10·31" } },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Tratamientos capilares Fibre Clinix Schwarzkopf",
-          },
-        },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Diseño y laminado de cejas" } },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Extensiones de pestañas clásicas, volumen e híbridas",
+            name: "Bae Berry",
           },
         },
       ],

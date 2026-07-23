@@ -101,8 +101,8 @@ async function enviarEmailRecordatorio(cita: Cita & { time: string }): Promise<b
         <div style="font-size:0.9rem;color:#222">💇 ${cita.servicio || "Cita en el salón"}</div>
       </div>
       <p style="margin:0 0 6px;font-size:0.85rem;color:#555">📍 C. Puerta Canseco, 14 · 38003 Santa Cruz de Tenerife</p>
-      <p style="margin:0 0 24px;font-size:0.85rem;color:#555">📞 627 052 418</p>
-      <p style="margin:0;font-size:0.8rem;color:#999">¿Necesitas cancelar? Llámanos con antelación al <strong>627 052 418</strong>.<br>¡Te esperamos! 💛</p>
+      <p style="margin:0 0 24px;font-size:0.85rem;color:#555">📞 643 50 36 18</p>
+      <p style="margin:0;font-size:0.8rem;color:#999">¿Necesitas cancelar? Llámanos con antelación al <strong>643 50 36 18</strong>.<br>¡Te esperamos! 💛</p>
     </div>
     <div style="background:#090c13;padding:16px 32px;text-align:center">
       <p style="margin:0;font-size:0.72rem;color:#7e8a9a">BN Estilistas · C. Puerta Canseco, 14, 38003 Santa Cruz de Tenerife</p>

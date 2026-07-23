@@ -74,7 +74,7 @@ export function ChatWidget() {
 
   function botSayFallback() {
     botSay(
-      "Para cualquier consulta llámanos al <strong>627 052 418</strong> o escríbenos por WhatsApp. ¡Estaremos encantadas de ayudarte!",
+      "Para cualquier consulta llámanos al <strong>643 50 36 18</strong> o escríbenos por WhatsApp. ¡Estaremos encantadas de ayudarte!",
       ["Pedir cita", "Horario"],
     );
   }

@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     "business:contact_data:locality": "Santa Cruz de Tenerife",
     "business:contact_data:postal_code": "38003",
     "business:contact_data:country_name": "España",
-    "business:contact_data:phone_number": "+34627052418",
+    "business:contact_data:phone_number": "+34643503618",
   },
 };
 

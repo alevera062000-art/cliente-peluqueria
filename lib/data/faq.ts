@@ -9,7 +9,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "¿Qué pasa si necesito cancelar o cambiar mi cita?",
     answer:
-      "Puedes cancelar tu cita usando el código de 8 caracteres que recibes al reservar, o llamándonos al 627 052 418. Te pedimos que canceles con al menos 24 horas de antelación para que podamos ofrecer ese horario a otras clientas.",
+      "Puedes cancelar tu cita usando el código de 8 caracteres que recibes al reservar, o llamándonos al 643 50 36 18. Te pedimos que canceles con al menos 24 horas de antelación para que podamos ofrecer ese horario a otras clientas.",
   },
   {
     question: "¿Cuánto dura una cita de coloración o mechas en BN Estilistas?",

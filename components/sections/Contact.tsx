@@ -58,7 +58,7 @@ export function Contact() {
                 <div className="cinfo-body">
                   <span className="clabel">Teléfono</span>
                   <span className="cval">
-                    <a href="tel:627052418">627 052 418</a>
+                    <a href="tel:643503618">643 50 36 18</a>
                   </span>
                 </div>
               </div>
@@ -105,8 +105,8 @@ export function Contact() {
             <p className="form-note">
               Déjanos tu mensaje y te confirmamos tu cita lo antes posible. También puedes llamarnos
               directamente al{" "}
-              <a href="tel:627052418" style={{ color: "var(--gold)" }}>
-                627 052 418
+              <a href="tel:643503618" style={{ color: "var(--gold)" }}>
+                643 50 36 18
               </a>
               .
             </p>
